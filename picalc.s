@@ -1,4 +1,5 @@
-
+#Farshad Chowdhury
+#Th
 
         .text 
         .globl main
@@ -59,14 +60,16 @@ skip:    addi $s0, $s0, -1
          li $v0, 2 
          syscall             
          li $v0, 10 
-         syscall             # end of program
-
-#-------------------------------------------------------------------------- 
+         syscall       
         .data 
 x:      .word 311
 y:      .word 171 
 z:      .word 65536 
-tosses:	.word 100000
+tosses:	.word 10000000
 one:    .float 1.0 
 seed:   .word 79 
 temp:   .word 0 
+#The binary representation of the output is 01000000010010010000101101100011.
+#The hexadecimal representation of the output is 0x40490b63
+#After using 10000000 tosses the most accurate result was 3.1413548.
+#The estimated pi would be much more accurate if a double was used in this case instead of float. 
